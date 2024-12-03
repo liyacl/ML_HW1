@@ -105,25 +105,3 @@ async def predict_items(file: UploadFile = File(...)):
     
 if __name__ == "__main__":
     uvicorn.run('main:app', port=8000, reload=True)
-
-
-# @app.post("/predict_items")
-# async def predict_items(file: UploadFile = File(...)):
-
-
-#     input_df = pd.read_csv(file.file)
-#     input_data_preprocessed = preprocess_data(input_df)
-
-
-#     predictions = model.predict(input_data_preprocessed)
-
-
-#     # Создание DataFrame с предсказаниями
-
-#     output_df = input_df.copy() # Создаем копию входного DataFrame
-#     output_df['predictions'] = predictions # Добавляем столбец с предсказаниями
-
-
-
-#     # Возврат DataFrame в виде CSV файла
-#     return output_df.to_csv(index=False)
